@@ -1,0 +1,162 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>582</x><y>3</y><w>180</w><h>174</h></coordinates><panel_attributes>Aerolinea BondiJet
+--
+-r_Vuelos
+-r_Pasajeros
+-r_Aeropuerto
+-r_Cliente
+--
+Operaciones
+--
+-BondiJet(nombre,CUIT)
+-destinoDeVuelo()
+-registroDePasajero(pasajero)
+-asientoPasajero(asiento,pasajero)
+-registroDeAeropuerto(aeropuerto)
+-vueloNacional()
+-vueloIntern()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>231</y><w>126</w><h>216</h></coordinates><panel_attributes>r_Vuelos
+--
+-codigo
+-destino
+-cantDeAsientos
+-tripulantes
+-horaSalida
+-horaLlegada
+-pasajero
+-asiento
+-seccion
+-nacional
+-internacional
+-publico
+-privados
+-pasaje
+--
+Operaciones
+--
+-seccionDelVuelo(seccion, asiento)
+-asientoAsignado(pasajero,asiento)
+-asientoNoOcupado(seccion,asiento,pasajero)
+-horaAeropSalida(horaSalida)
+-horaAeropLlegada(horaLlegada)
+-reprogramarVuelo() //Preguntar</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>228</x><y>477</y><w>144</w><h>132</h></coordinates><panel_attributes>vuelos Nacional
+--
+-destino
+-vueloDirecto
+-refrigerio
+-secciones
+-pasajeros
+-precio
+--
+Operaciones
+--
+-vueloNacional(destino,vueloDirecto,
+refrigerio,seccion,pasajeros,precio)
+-pasaje(seccion,asiento,precio)
+-cantMaxPasajeros(pasajeros,seccion)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>624</x><y>483</y><w>264</w><h>138</h></coordinates><panel_attributes>vuelos Privados
+--
+-destinoNacional
+-jet
+-asientos
+-pasajero
+-pasajeroAcomp
+-precio
+--
+Operaciones
+--
+-vueloPrivado(destinoNacional,jet,asientos,pasajero,pasajeroAcomp,precio)
+-capacidadMax(asientos)
+-precioJet(jet,precio)
+-registroPasajero(pasajero,pasajeroAcomp)
+-precioFinal(precio,jet,pasajero,pasajeroAcomp)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>477</y><w>180</w><h>150</h></coordinates><panel_attributes>vuelos Internacionales
+--
+-destino
+-vuelo
+-vueloEscala
+-vueloDirecto
+-refrigerios
+-pasajeros
+-secciones
+-precio
+--
+Operaciones
+--
+-vueloIntercionales(destino,vuelo,refrigerios,
+pasajeros,secciones,precio)
+-consultarVuelo(vueloEscala,vueloDirecto,destino)
+-destinoEscala(destino)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>438</x><y>81</y><w>156</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;250;10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>399</y><w>132</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>441</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>516</x><y>387</y><w>186</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>290;160;290;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>828</x><y>111</y><w>144</w><h>114</h></coordinates><panel_attributes>Aeropuerto
+--
+-nombre
+-provincia
+-departamento
+-estado
+-distrito
+-direccion
+--
+Operaciones
+--
+-Aeropuerto(nombre,provincia,
+departamento,estado,distrito,direccion)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>708</x><y>327</y><w>126</w><h>114</h></coordinates><panel_attributes>Cliente
+--
+-DNI
+-nombre
+-telefono
+-registrado
+-noPasajero
+--
+Operaciones
+--
+-Cliente(nombre,DNI,telefono)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>744</x><y>171</y><w>18</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;260;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>159</y><w>84</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>486</x><y>735</y><w>444</w><h>438</h></coordinates><panel_attributes>BondiJet intfz
+bg=black
+-
+
+1-BondiJet(nombre, CUIT) 
+---//Crea la aerolinea BondiJet.
+
+2-registrarCliente(nombre, telefono, DNI) 
+---// Registra al pasajero como cliente. 
+
+3-registrarAeropuerto(nombre, provincia,
+departamento, estado, distrito, direccion) 
+---//Registra el Aeropuerto de la Aerolinea.
+
+4-vueloPublicoNacional(destino, secciones, cantMaxPasajeros, unRefrigerio) 
+---//Crea un vuelo publico Nacional
+
+5-vueloPublicoInternacional(destino, tipoDeVuelo,
+refrigerios, secciones) 
+---//Crea un Vuelo Publico Internacional
+
+6-registrarVueloPrivado(pasajeros, destino) 
+---// Registra un Vuelo Privado
+
+7-consultarAsientoDisponible(codigo, vuelo) 
+---//Consulta el asiento disponible en base a su codigo
+
+8-pasajeVueloPubNacional(dniPasajero ,int asiento, int codigo) 
+---//Vende un pasaje de un vuelo publico a un pasajero, según su dni, codigo de vuelo y numero de asiento
+
+9-pasajeVueloPubIntern(dniPasajero, codigo, 
+numAsiento, seccion) 
+---//Vende un pasaje a un vuelo publico internacional, según el dni del cliente, codigo de vuelo, numero de asiento y de sección
+
+10-venderVueloPrivado(comprador, listaDePasajeros) 
+---//Vende un vuelo privado según el comprador y la lista de pasajeros invitados
+
+11- consultarVuelos(vuelo, origen, destino, fecha) 
+---//Consulta los vuelos de los proximos 7 dias según la fecha ingresada, en base a su origen de partida y destino de llegada
+
+12- cancelarPasaje(pasajero, vuelo, asiento) 
+---//Cancela un pasaje, según el cliente, vuelo y asiento. El pasaje vuelve a estar disponible para comprar
+
+13-cancelarVueloCompleto(vuelo) 
+---//Cancela el vuelo y reprograma automaticamente los pasajes, manteniendo asientos y secciones (en lo posible) 
+y a su vez manteniendo el mismo destino, sin importar las escalas (informa sobre cambios)
+
+14- devolverRecaudado(destino) 
+---//Devuelve el total recaudado en pasajes a un destino en particular
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
