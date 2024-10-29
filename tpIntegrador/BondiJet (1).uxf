@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>582</x><y>3</y><w>180</w><h>174</h></coordinates><panel_attributes>Aerolinea BondiJet
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>450</x><y>0</y><w>180</w><h>174</h></coordinates><panel_attributes>Aerolinea BondiJet
 --
 -r_Vuelos
 -r_Pasajeros
@@ -14,7 +14,7 @@ Operaciones
 -registroDeAeropuerto(aeropuerto)
 -vueloNacional()
 -vueloIntern()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>231</y><w>126</w><h>216</h></coordinates><panel_attributes>r_Vuelos
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>264</x><y>228</y><w>126</w><h>216</h></coordinates><panel_attributes>r_Vuelos
 --
 -codigo
 -destino
@@ -38,7 +38,7 @@ Operaciones
 -asientoNoOcupado(seccion,asiento,pasajero)
 -horaAeropSalida(horaSalida)
 -horaAeropLlegada(horaLlegada)
--reprogramarVuelo() //Preguntar</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>228</x><y>477</y><w>144</w><h>132</h></coordinates><panel_attributes>vuelos Nacional
+-reprogramarVuelo() //Preguntar</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>96</x><y>474</y><w>144</w><h>132</h></coordinates><panel_attributes>vuelos Nacional
 --
 -destino
 -vueloDirecto
@@ -52,7 +52,7 @@ Operaciones
 -vueloNacional(destino,vueloDirecto,
 refrigerio,seccion,pasajeros,precio)
 -pasaje(seccion,asiento,precio)
--cantMaxPasajeros(pasajeros,seccion)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>624</x><y>483</y><w>264</w><h>138</h></coordinates><panel_attributes>vuelos Privados
+-cantMaxPasajeros(pasajeros,seccion)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>492</x><y>480</y><w>264</w><h>138</h></coordinates><panel_attributes>vuelos Privados
 --
 -destinoNacional
 -jet
@@ -68,7 +68,7 @@ Operaciones
 -precioJet(jet,precio)
 -registroPasajero(pasajero,pasajeroAcomp)
 -precioFinal(precio,jet,pasajero,pasajeroAcomp)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>477</y><w>180</w><h>150</h></coordinates><panel_attributes>vuelos Internacionales
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>282</x><y>474</y><w>180</w><h>150</h></coordinates><panel_attributes>vuelos Internacionales
 --
 -destino
 -vuelo
@@ -85,7 +85,7 @@ Operaciones
 pasajeros,secciones,precio)
 -consultarVuelo(vueloEscala,vueloDirecto,destino)
 -destinoEscala(destino)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>438</x><y>81</y><w>156</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;250;10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>399</y><w>132</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>441</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>516</x><y>387</y><w>186</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>290;160;290;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>828</x><y>111</y><w>144</w><h>114</h></coordinates><panel_attributes>Aeropuerto
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>78</y><w>156</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;250;10;10;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>138</x><y>396</y><w>132</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>438</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>384</y><w>186</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>290;160;290;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>696</x><y>108</y><w>144</w><h>114</h></coordinates><panel_attributes>Aeropuerto
 --
 -nombre
 -provincia
@@ -99,7 +99,7 @@ Operaciones
 -Aeropuerto(nombre,provincia,
 departamento,estado,distrito,direccion)
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>708</x><y>327</y><w>126</w><h>114</h></coordinates><panel_attributes>Cliente
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>324</y><w>126</w><h>114</h></coordinates><panel_attributes>Cliente
 --
 -DNI
 -nombre
@@ -110,7 +110,7 @@ departamento,estado,distrito,direccion)
 Operaciones
 --
 -Cliente(nombre,DNI,telefono)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>744</x><y>171</y><w>18</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;260;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>159</y><w>84</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>486</x><y>735</y><w>444</w><h>438</h></coordinates><panel_attributes>BondiJet intfz
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>612</x><y>168</y><w>18</w><h>168</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;260;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>624</x><y>156</y><w>84</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>354</x><y>732</y><w>444</w><h>438</h></coordinates><panel_attributes>BondiJet intfz
 bg=black
 -
 
