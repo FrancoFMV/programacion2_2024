@@ -57,14 +57,32 @@ public class Practica0 {
         return ret;
     }
 
+    public static boolean filasCrecientesParImpar(int[][] matriz){
+        boolean filaCrec = true;
+        boolean colParImpar = true;
+
+        for (int f=0; f<matriz.length; f++){
+            for (int c=0; c<matriz[0].length; c++){
+                filaCrec &= matriz[f][c] < matriz[siguiente(f)][c] && matriz[siguiente(f)][c]<matriz[siguiente(siguiente(f))][c];
+
+                colParImpar &= matriz[f][c]%2==0 && matriz[f][c]%2!=0;
+            }
+        }
+
+        return filaCrec==colParImpar;
+    }
+
+    public static int siguiente(int i){
+        return i++;
+    }
+
     @SuppressWarnings("unused")
     public static void main(String[] args) {
         int[] lista = {5,5};
         int[] lista2 = {5,10,15};
         int[][] matrizEj = {
-            {1,2,-3},
-            {4,5,6},
-            {10,30,75}
+            {1,3},
+            {5,7}
         };
 
         /* Ej 1 */
@@ -97,7 +115,10 @@ public class Practica0 {
         // }
 
         /* Ej 6 */
-        System.out.println(tieneNegativos(matrizEj));
+        // System.out.println(tieneNegativos(matrizEj));
+
+        /* Ej 7 */
+        System.out.println(filasCrecientesParImpar(matrizEj));
 
     }
 }

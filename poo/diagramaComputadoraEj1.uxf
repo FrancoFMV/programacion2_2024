@@ -1,0 +1,90 @@
+<diagram program="umletino" version="15.1"><zoom_level>4</zoom_level><element><id>UMLClass</id><coordinates><x>156</x><y>40</y><w>84</w><h>76</h></coordinates><panel_attributes>Computadora
+--
+-marca
+-modelo
+-añoFabricacion
+-discoRigido : Disco Rigido
+-memoria : Memoria
+-procesador : Procesador
+
+--
+Operaciones
+--
+-crear()
+-detalle() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>56</x><y>144</y><w>84</w><h>52</h></coordinates><panel_attributes>DiscoRigido
+--
+-marca
+-capacidad
+-rpm
+--
+Operaciones
+--
+-crear(marca,capacidad,rpm)
+-detalle() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>152</x><y>144</y><w>84</w><h>52</h></coordinates><panel_attributes>Procesador
+--
+-marca
+-capacidad
+-GHz
+--
+Operaciones
+--
+-crear(marca,capacidad,GHz)
+-detalle() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>244</x><y>144</y><w>84</w><h>44</h></coordinates><panel_attributes>Memoria
+--
+-capacidad
+--
+Operaciones
+--
+-crear(capacidad)
+-detalle() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>332</x><y>164</y><w>84</w><h>32</h></coordinates><panel_attributes>&lt;&lt;Interfaz&gt;&gt;
+--
+--
+-encender()
+-apagar()
+-estarEncendido() : boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>284</x><y>32</y><w>84</w><h>76</h></coordinates><panel_attributes>Dispositivo Electronico
+--
+-marca
+-modelo
+-estaEncendido
+--
+Operaciones
+--
+-crear(marca,modelo)
+-encender()
+-apagar()
+-estaEncendido() : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>88</y><w>84</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;140;10;10;190;10</additional_attributes></element><element><id>Relation</id><coordinates><x>188</x><y>112</y><w>12</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>84</y><w>36</w><h>68</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;150;70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>104</y><w>12</w><h>68</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>348</x><y>120</y><w>56</w><h>16</h></coordinates><panel_attributes>Implementacion(Es)
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>240</x><y>40</y><w>44</w><h>16</h></coordinates><panel_attributes>Herencia(Es un)
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>100</y><w>64</w><h>52</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;110;140;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>96</x><y>104</y><w>44</w><h>12</h></coordinates><panel_attributes>Dependencia(Usa)
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>132</x><y>100</y><w>160</w><h>52</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>380;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>224</x><y>84</y><w>68</w><h>68</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>292</x><y>224</y><w>40</w><h>52</h></coordinates><panel_attributes>Monitor
+--
+-resolucion
+-tamaño
+-
+Operacione
+-
+-crear(marca,resolucion,tamaño)
+-detalle() : String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>328</x><y>64</y><w>128</w><h>172</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;300;10;290;410;10;410</additional_attributes></element><element><id>UMLClass</id><coordinates><x>68</x><y>44</y><w>40</w><h>44</h></coordinates><panel_attributes>Laptop
+-
+-duracion
+-
+Operaciones
+-
+-crear(...)
+-detalle() : String
+-tipo()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>104</x><y>52</y><w>60</w><h>12</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>204</x><y>228</y><w>48</w><h>44</h></coordinates><panel_attributes>Desktop
+-
+monitor : Monitor
+-Operaciones
+-
+-crea()
+-detalle() : String
+-tipo()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>248</x><y>240</y><w>52</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>236</x><y>112</y><w>20</w><h>124</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;10;10;290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>148</x><y>260</y><w>40</w><h>36</h></coordinates><panel_attributes>AllInOne
+-
+Operaciones
+-
+-crear(...)
+-tipo()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>236</y><w>36</w><h>32</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>70;10;10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>236</x><y>56</y><w>56</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element></diagram>
